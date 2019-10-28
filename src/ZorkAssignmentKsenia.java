@@ -19,21 +19,22 @@ public class ZorkAssignmentKsenia {
                     System.out.println("Goodbye!");
                 } else if (answer == 1) {
                     answer = roomOne();
-                } else if (answer == 2) {
-                    answer = roomTwo();
-                } else if (answer == 3) {
-                    answer = roomThree();
-                } else if (answer == 4) {
-                    answer = roomFour();
-                } else if (answer == 5) {
-                    answer = roomFive();
-                } else if (answer == 6) {
-                    answer = roomSix();
-                } else if (answer == 7) {
-                    answer = roomSeven();
-                } else if (answer == 8) {
-                    answer = roomEight();
-                } // end else-ifs
+                }
+//                else if (answer == 2) {
+//                    answer = roomTwo();
+//                } else if (answer == 3) {
+//                    answer = roomThree();
+//                } else if (answer == 4) {
+//                    answer = roomFour();
+//                } else if (answer == 5) {
+//                    answer = roomFive();
+//                } else if (answer == 6) {
+//                    answer = roomSix();
+//                } else if (answer == 7) {
+//                    answer = roomSeven();
+//                } else if (answer == 8) {
+//                    answer = roomEight();
+//                } // end else-ifs
             } // end play loop
 
         } // end main
