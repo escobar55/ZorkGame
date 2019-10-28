@@ -1,6 +1,10 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class ZorkAssignmentSoheila {
+
+    public static boolean secretOpen;
+
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         int answer;
@@ -11,6 +15,8 @@ public class ZorkAssignmentSoheila {
         System.out.println("Go to room 1 (1) or exit (0)?");
         answer = keyboard.nextInt();
         keyboard.nextLine();
+
+        secretOpen = false;
 
         while (play) {
             if (answer == 0) {
@@ -30,11 +36,11 @@ public class ZorkAssignmentSoheila {
             } else if (answer == 5) {
                 answer = roomFive();
             } else if (answer == 6) {
-               // answer = roomSix();
+               answer = roomSix();
             } else if (answer == 7) {
                 answer = roomSeven();
             } else if (answer == 8) {
-                //answer = roomEight();
+                answer = roomEight();
             } //end if statements
         } //end while loop
 
@@ -151,6 +157,51 @@ public class ZorkAssignmentSoheila {
 
     } // end room five method
 
+    public static int roomSix() {
+        Scanner keyboard = new Scanner(System.in);
+        String answer;
+
+        System.out.println("Welcome to room 6, the vault.");
+        System.out.println("You see 3 walking skeletons.");
+
+        if(!secretOpen) {  // if secret room is not already open
+            // 25% chance that secret will open
+            Random randomGenerator = new Random();
+            int random = randomGenerator.nextInt(4) + 1;   // make it random in the range of 1 through 4
+            if (random == 1) {
+                // the secret is opened!
+                secretOpen = true;
+            }
+        }
+
+        if (secretOpen) {
+            System.out.println("You can go East (E) to room 7 or East to the Secret Room (*)!");
+            while (true) {
+                answer = keyboard.nextLine();
+                if (answer.equalsIgnoreCase("e")) {
+                    return 7;
+                } else if (answer.equalsIgnoreCase("*")) {
+                    return 8; // will call method roomSeven from inside main()
+                } else {
+                    System.out.println("Please enter a valid choice (E: East to room 7, *: East to the Secret Room!): ");
+                }
+            } //end while loop :: secret open !! :)
+        }
+        else {
+            System.out.println("You can go East (E) to room 7.");
+            while (true) {
+                answer = keyboard.nextLine();
+                if (answer.equalsIgnoreCase("e")) {
+                    return 7;
+                } else {
+                    System.out.println("Please enter a valid choice (E: East to room 7): ");
+                }
+            } //end while loop :: secret NOT open
+        } // end if-else whether secret room is available or not
+
+    } // end room six method
+
+
     public static int roomSeven() {
         Scanner keyboard = new Scanner(System.in);
         String answer;
@@ -171,6 +222,25 @@ public class ZorkAssignmentSoheila {
         } //end while loop - room 7
 
     } //end- roomSeven method
+
+    public static int roomEight() {
+        Scanner keyboard = new Scanner(System.in);
+        String answer;
+
+        System.out.println("Welcome to room 8, the secret room.");
+        System.out.println("You see piles of gold!.");
+        System.out.println("You can only go West(W).");
+
+        while (true) {
+            answer = keyboard.nextLine();
+            if (answer.equalsIgnoreCase("W")) {
+                return 6;  // will call method roomSix from inside main()
+            } else {
+                System.out.println("Please enter a valid choice (W: West): ");
+            }
+        }
+
+    } // end room eight method
 
 
 }//end main class
