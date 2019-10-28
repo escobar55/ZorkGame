@@ -36,6 +36,20 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="ZorkAssignment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ZorkAssignment" />
+      <module name="ZorkAssignment" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ZorkAssignment" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -48,6 +62,7 @@
       <updated>1572269036519</updated>
       <workItem from="1572269052825" duration="105000" />
       <workItem from="1572270003280" duration="532000" />
+
     </task>
     <servers />
   </component>
