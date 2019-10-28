@@ -1,4 +1,4 @@
-/*import java.util.Scanner;
+import java.util.Scanner;
 
 public class ZorkAssignmentKsenia {
 
@@ -86,4 +86,3 @@ public class ZorkAssignmentKsenia {
     }
 
 }
-*/
