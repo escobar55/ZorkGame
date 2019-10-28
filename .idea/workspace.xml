@@ -39,7 +39,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ZorkAssignmentSoheila">
+  <component name="RunManager" selected="Application.ZorkAssignmentKsenia">
     <configuration name="ZorkAssignment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ZorkAssignment" />
       <module name="ZorkAssignment" />
@@ -63,8 +63,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ZorkAssignmentSoheila" />
         <item itemvalue="Application.ZorkAssignmentKsenia" />
+        <item itemvalue="Application.ZorkAssignmentSoheila" />
         <item itemvalue="Application.ZorkAssignment" />
       </list>
     </recent_temporary>

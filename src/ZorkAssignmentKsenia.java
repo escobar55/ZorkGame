@@ -7,41 +7,48 @@ public class ZorkAssignmentKsenia {
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        int answer;
+        String answer;
+        int choice;
         boolean play;
 
         System.out.println("Welcome to Zork!");
-
-        System.out.println("Go to room 1 (1) or exit (0)?");
-        answer = keyboard.nextInt();
-        keyboard.nextLine();
+        System.out.println("Would you like to play (Y/N)?");
+        while (true) {
+            answer = keyboard.nextLine();
+            if (answer.equalsIgnoreCase("y")) {
+                choice = 1;
+                break;
+            } else if (answer.equalsIgnoreCase("n")) {
+                choice = 0;
+                break;
+            } else {
+                System.out.println("Please enter a valid choice (Y: to play, N: to quit): ");
+            }
+        }
 
         play = true;
         secretOpen = false;
         while (play) {
-            if (answer == 0) {
+            if (choice == 0) {
                 play = false;
                 System.out.println("Goodbye!");
-            } else if (answer == 1) {
-                answer = roomOne();
-            } else if (answer == 2) {
-                answer = roomTwo();
-            } else if (answer == 3) {
-                answer = roomThree();
-            } else if (answer == 4) {
-                answer = roomFour();
-            } else if (answer == 5) {
-                answer = roomFive();
-            } else if (answer == 6) {
-                answer = roomSix();
-            } else if (answer == 7) {
-                answer = roomSeven();
-            }
-//rooms to be written
-//                else if (answer == 8) {
-//                    answer = roomEight();
-//                } // end else-ifs
-
+            } else if (choice == 1) {
+                choice = roomOne();
+            } else if (choice == 2) {
+                choice = roomTwo();
+            } else if (choice == 3) {
+                choice = roomThree();
+            } else if (choice == 4) {
+                choice = roomFour();
+            } else if (choice == 5) {
+                choice = roomFive();
+            } else if (choice == 6) {
+                choice = roomSix();
+            } else if (choice == 7) {
+                choice = roomSeven();
+            } else if (choice == 8) {
+                    choice = roomEight();
+            } // end else-ifs
 
         } // end play loop
 
@@ -54,7 +61,7 @@ public class ZorkAssignmentKsenia {
 
         System.out.println("Welcome to room 1, the foyer.");
         System.out.println("You see a dead scorpion.");
-        System.out.println("You can go North (N) or leave (Q).");
+        System.out.println("You can go North (N), or Quit (Q).");
 
         while (true) {
             answer = keyboard.nextLine();
@@ -63,7 +70,7 @@ public class ZorkAssignmentKsenia {
             } else if (answer.equalsIgnoreCase("q")) {
                 return 0;
             } else {
-                System.out.println("Please enter a valid choice (N: North to room 2, Q: to exit castle): ");
+                System.out.println("Please enter a valid choice (N:North, Q:Quit): ");
             }
         }
 
@@ -76,7 +83,7 @@ public class ZorkAssignmentKsenia {
 
         System.out.println("Welcome to room 2, the front room.");
         System.out.println("You see a piano.");
-        System.out.println("You can go South (S), or West (W), or East (E)");
+        System.out.println("You can go South (S), or West (W), or East (E).");
 
         while (true) {
             answer = keyboard.nextLine();
@@ -86,8 +93,10 @@ public class ZorkAssignmentKsenia {
                 return 3; // will call method roomThree from inside main()
             } else if(answer.equalsIgnoreCase("e")){
                 return 4; // will call method roomFour from inside main()
-            }  else {
-                System.out.println("Please enter a valid choice (S: South to room 1, W: West to room 3, E: East to room 4): ");
+            } else if (answer.equalsIgnoreCase("q")) {
+                return 0;
+            } else {
+                System.out.println("Please enter a valid choice (S:South, W:West, E:East, Q:Quit): ");
             }
         } //end while loop - room 2
 
@@ -108,8 +117,10 @@ public class ZorkAssignmentKsenia {
                 return 5;  // will call method roomTwo from inside main()
             } else if (answer.equalsIgnoreCase("e")) {
                 return 2;
-            } else {
-                System.out.println("Please enter a valid choice (N: North to room 5, E: East to room 2): ");
+            } else if (answer.equalsIgnoreCase("q")) {
+                return 0;
+            }else {
+                System.out.println("Please enter a valid choice (N:North, E:East, Q:Quit): ");
             }
         }
 
@@ -121,16 +132,18 @@ public class ZorkAssignmentKsenia {
 
         System.out.println("Welcome to room 4, the kitchen room.");
         System.out.println("You see bats.");
-        System.out.println("You can go West (W) to room 2, or North (N) to room 7");
+        System.out.println("You can go West (W) to room 2, or North (N) to room 7.");
 
         while (true) {
             answer = keyboard.nextLine();
-            if (answer.equalsIgnoreCase("W")) {
+            if (answer.equalsIgnoreCase("w")) {
                 return 2;  // will call method roomTwo from inside main()
             } else if (answer.equalsIgnoreCase("n")) {
                 return 7; // will call method roomSeven from inside main()
+            } else if (answer.equalsIgnoreCase("q")) {
+                return 0;
             } else {
-                System.out.println("Please enter a valid choice (W: West to room 2, N: to room 7): ");
+                System.out.println("Please enter a valid choice (W:West, N:North, Q:Quit): ");
             }
         } //end while loop - room 4
 
@@ -142,14 +155,16 @@ public class ZorkAssignmentKsenia {
 
         System.out.println("Welcome to room 5, the dining room.");
         System.out.println("You see some dust and an empty box.");
-        System.out.println("You can only go back the way you came (S).");
+        System.out.println("You can only go South (S).");
 
         while (true) {
             answer = keyboard.nextLine();
             if (answer.equalsIgnoreCase("s")) {
                 return 3;  // will call method roomTwo from inside main()
+            } else if (answer.equalsIgnoreCase("q")) {
+                return 0;
             } else {
-                System.out.println("Please enter a valid choice (S: South to room 3): ");
+                System.out.println("Please enter a valid choice (S:South, Q:Quit): ");
             }
         }
 
@@ -180,8 +195,10 @@ public class ZorkAssignmentKsenia {
                     return 7;
                 } else if (answer.equalsIgnoreCase("*")) {
                     return 8; // will call method roomSeven from inside main()
+                } else if (answer.equalsIgnoreCase("q")) {
+                    return 0;
                 } else {
-                    System.out.println("Please enter a valid choice (E: East to room 7, *: East to the Secret Room!): ");
+                    System.out.println("Please enter a valid choice (E:East, *:Secret Room, Q:Quit): ");
                 }
             } //end while loop :: secret open !! :)
         }
@@ -191,8 +208,10 @@ public class ZorkAssignmentKsenia {
                 answer = keyboard.nextLine();
                 if (answer.equalsIgnoreCase("e")) {
                     return 7;
+                } else if (answer.equalsIgnoreCase("q")) {
+                    return 0;
                 } else {
-                    System.out.println("Please enter a valid choice (E: East to room 7): ");
+                    System.out.println("Please enter a valid choice (E:East, Q:Quit): ");
                 }
             } //end while loop :: secret NOT open
         } // end if-else whether secret room is available or not
@@ -206,7 +225,7 @@ public class ZorkAssignmentKsenia {
 
         System.out.println("Welcome to room 7, the parlor room.");
         System.out.println("You see a treasure chest.");
-        System.out.println("You can go West (W), or South (S)");
+        System.out.println("You can go West (W), or South (S).");
 
         while (true) {
             answer = keyboard.nextLine();
@@ -214,11 +233,35 @@ public class ZorkAssignmentKsenia {
                 return 6;  // will call method roomSix from inside main()
             } else if (answer.equalsIgnoreCase("S")) {
                 return 4; // will call method roomFour from inside main()
+            } else if (answer.equalsIgnoreCase("q")) {
+                return 0;
             } else {
-                System.out.println("Please enter a valid choice (W: West to room 6, S: to room 4): ");
+                System.out.println("Please enter a valid choice (W:West, S:South, Q:Quit): ");
             }
         } //end while loop - room 7
 
     } //end- roomSeven method
+
+
+    public static int roomEight() {
+        Scanner keyboard = new Scanner(System.in);
+        String answer;
+
+        System.out.println("Welcome to room 8, the secret room.");
+        System.out.println("You see piles of gold!.");
+        System.out.println("You can only go West (W).");
+
+        while (true) {
+            answer = keyboard.nextLine();
+            if (answer.equalsIgnoreCase("W")) {
+                return 6;  // will call method roomSix from inside main()
+            } else if (answer.equalsIgnoreCase("q")) {
+                return 0;
+            } else {
+                System.out.println("Please enter a valid choice (W:West, Q:Quit): ");
+            }
+        }
+
+    } // end room eight method
 
 }
