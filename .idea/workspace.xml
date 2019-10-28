@@ -39,9 +39,7 @@
       </list>
     </option>
   </component>
-
   <component name="RunManager" selected="Application.ZorkAssignmentKsenia">
-
     <configuration name="ZorkAssignment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ZorkAssignment" />
       <module name="ZorkAssignment" />
@@ -49,25 +47,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-
-    <configuration name="ZorkAssignmentSoheila" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ZorkAssignmentSoheila" />
-
     <configuration name="ZorkAssignmentKsenia" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ZorkAssignmentKsenia" />
-
       <module name="ZorkAssignment" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZorkAssignmentSoheila" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ZorkAssignmentSoheila" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-
-        <item itemvalue="Application.ZorkAssignmentSoheila" />
-
         <item itemvalue="Application.ZorkAssignmentKsenia" />
-
+        <item itemvalue="Application.ZorkAssignmentSoheila" />
         <item itemvalue="Application.ZorkAssignment" />
       </list>
     </recent_temporary>
