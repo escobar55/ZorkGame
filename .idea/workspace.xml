@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e487a904-450f-4cbc-8c87-bd073434406c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ZorkAssignmentSoheila.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ZorkAssignmentSoheila.java" afterDir="false" />
-    </list>
+    <list default="true" id="e487a904-450f-4cbc-8c87-bd073434406c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +36,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ZorkAssignmentKsenia">
+  <component name="RunManager" selected="Application.ZorkAssignment">
     <configuration name="ZorkAssignment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ZorkAssignment" />
       <module name="ZorkAssignment" />
@@ -62,9 +60,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ZorkAssignment" />
         <item itemvalue="Application.ZorkAssignmentKsenia" />
         <item itemvalue="Application.ZorkAssignmentSoheila" />
-        <item itemvalue="Application.ZorkAssignment" />
       </list>
     </recent_temporary>
   </component>
