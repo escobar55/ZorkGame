@@ -34,7 +34,7 @@ public class ZorkAssignment {
         Scanner keyboard = new Scanner(System.in);
         String answer;
 
-        System.out.println("Welcome to room 1.");
+        System.out.println("Welcome to room 1, the foyer.");
         System.out.println("You see a dead scorpion.");
         System.out.println("You can go North (N) or leave (Q).");
 
