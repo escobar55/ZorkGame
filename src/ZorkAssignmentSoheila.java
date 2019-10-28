@@ -27,16 +27,15 @@ public class ZorkAssignmentSoheila {
             } else if (answer == 4) {
                 answer = roomFour();
                 System.out.println(answer);
-            } /* else if (answer == 5) {
+            } else if (answer == 5) {
                 answer = roomFive();
             } else if (answer == 6) {
-                answer = roomSix();
+               // answer = roomSix();
             } else if (answer == 7) {
                 answer = roomSeven();
             } else if (answer == 8) {
-                answer = roomEight();
+                //answer = roomEight();
             } //end if statements
-            */
         } //end while loop
 
     } //end main method
@@ -71,21 +70,21 @@ public class ZorkAssignmentSoheila {
         System.out.println("You can go South (S), or West (W), or East (E)");
 
         while (true) {
-            System.out.println("top of while loop, room 2");
+            //System.out.println("top of while loop, room 2");
             answer = keyboard.nextLine();
-            System.out.println("just before if-else, answer is " + answer);
+            //System.out.println("just before if-else, answer is " + answer);
             if (answer.equalsIgnoreCase("S")) {
-                System.out.println("in if \"s\" answer was " + answer);
+                //System.out.println("in if \"s\" answer was " + answer);
                 return 1;  // will call method roomOne from inside main()
             } else if (answer.equalsIgnoreCase("w")) {
-                System.out.println("in else-if \"w\", answer was " + answer);
+                //System.out.println("in else-if \"w\", answer was " + answer);
                 return 3; // will call method roomThree from inside main()
             } else if (answer.equalsIgnoreCase("e")) {
-                System.out.println("in else-if \"e\", answer was " + answer);
-                System.out.println(answer);
+                //System.out.println("in else-if \"e\", answer was " + answer);
+                //System.out.println(answer);
                 return 4; // will call method roomFour from inside main()
             } else {
-                System.out.println("in else: answer was " + answer);
+                //System.out.println("in else: answer was " + answer);
                 System.out.println("Please enter a valid choice (S: South back to room 1, W: to room 3, E: to room 4): ");
             }
         } //end while loop - room 2
@@ -117,8 +116,8 @@ public class ZorkAssignmentSoheila {
         String answer;
 
         System.out.println("Welcome to room 4, the kitchen room.");
-        System.out.println("You see bats.");
-        System.out.println("You can go back West (W) to room 2, or North (N) to room 7");
+        System.out.println("You see a bunch of bats.");
+        System.out.println("You can go back West (W), or North (N)");
 
         while (true) {
             answer = keyboard.nextLine();
@@ -131,6 +130,47 @@ public class ZorkAssignmentSoheila {
             }
         } //end while loop - room 4
 
-    } //end-room four method
+    } //end- roomFour method
+
+    public static int roomFive() {
+        Scanner keyboard = new Scanner(System.in);
+        String answer;
+
+        System.out.println("Welcome to room 5, the dining room.");
+        System.out.println("You see some dust and an empty box.");
+        System.out.println("You can only go back the way you came (S).");
+
+        while (true) {
+            answer = keyboard.nextLine();
+            if (answer.equalsIgnoreCase("s")) {
+                return 3;  // will call method roomTwo from inside main()
+            } else {
+                System.out.println("Please enter a valid choice (S: South): ");
+            }
+        }
+
+    } // end room five method
+
+    public static int roomSeven() {
+        Scanner keyboard = new Scanner(System.in);
+        String answer;
+
+        System.out.println("Welcome to room 7, the parlor room.");
+        System.out.println("You see a treasure chest.");
+        System.out.println("You can go West (W), or South (S)");
+
+        while (true) {
+            answer = keyboard.nextLine();
+            if (answer.equalsIgnoreCase("W")) {
+                return 6;  // will call method roomSix from inside main()
+            } else if (answer.equalsIgnoreCase("S")) {
+                return 4; // will call method roomFour from inside main()
+            } else {
+                System.out.println("Please enter a valid choice (W: West to room 6, S: to room 4): ");
+            }
+        } //end while loop - room 7
+
+    } //end- roomSeven method
+
 
 }//end main class
