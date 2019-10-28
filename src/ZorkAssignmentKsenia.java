@@ -23,13 +23,13 @@ public class ZorkAssignmentKsenia {
                 answer = roomTwo();
             } else if (answer == 3) {
                 answer = roomThree();
+            } else if (answer == 5) {
+                    answer = roomFive();
             }
 
 //rooms to be written
 //                else if (answer == 4) {
 //                    answer = roomFour();
-//                } else if (answer == 5) {
-//                    answer = roomFive();
 //                } else if (answer == 6) {
 //                    answer = roomSix();
 //                } else if (answer == 7) {
@@ -42,6 +42,7 @@ public class ZorkAssignmentKsenia {
         } // end play loop
 
     } // end main
+
 
     public static int roomOne() {
         Scanner keyboard = new Scanner(System.in);
@@ -88,6 +89,7 @@ public class ZorkAssignmentKsenia {
 
     } //end-room two method
 
+
     public static int roomThree() {
         Scanner keyboard = new Scanner(System.in);
         String answer;
@@ -108,5 +110,46 @@ public class ZorkAssignmentKsenia {
         }
 
     } // end room three method
+
+
+    public static int roomFive() {
+        Scanner keyboard = new Scanner(System.in);
+        String answer;
+
+        System.out.println("Welcome to room 5, the dining room.");
+        System.out.println("You see some dust and an empty box.");
+        System.out.println("You can only go back the way you came (S).");
+
+        while (true) {
+            answer = keyboard.nextLine();
+            if (answer.equalsIgnoreCase("s")) {
+                return 3;  // will call method roomTwo from inside main()
+            } else {
+                System.out.println("Please enter a valid choice (S: South): ");
+            }
+        }
+
+    } // end room five method
+
+    public static int roomSix() {
+        Scanner keyboard = new Scanner(System.in);
+        String answer;
+
+        System.out.println("Welcome to room 6, the vault.");
+        System.out.println("You see 3 walking skeletons.");
+
+
+        System.out.println("You can only go back the way you came (S).");
+
+        while (true) {
+            answer = keyboard.nextLine();
+            if (answer.equalsIgnoreCase("s")) {
+                return 3;  // will call method roomTwo from inside main()
+            } else {
+                System.out.println("Please enter a valid choice (S: South): ");
+            }
+        }
+
+    } // end room six method
 
 }
