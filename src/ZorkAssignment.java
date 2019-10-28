@@ -1,3 +1,9 @@
+/**
+ * Zork Game Assignment
+ * Team: Soheila & Ksenia
+ * Monday, October 28, 2019
+ */
+
 import java.util.Scanner;
 import java.util.Random;
 
