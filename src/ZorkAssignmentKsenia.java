@@ -32,14 +32,13 @@ public class ZorkAssignmentKsenia {
                 answer = roomFour();
             } else if (answer == 5) {
                 answer = roomFive();
-            }  else if (answer == 6) {
-                answer = roomSix(secretOpen);
+            } else if (answer == 6) {
+                answer = roomSix();
+            } else if (answer == 7) {
+                answer = roomSeven();
             }
-
 //rooms to be written
-//                else if (answer == 7) {
-//                    answer = roomSeven();
-//                } else if (answer == 8) {
+//                else if (answer == 8) {
 //                    answer = roomEight();
 //                } // end else-ifs
 
@@ -156,7 +155,7 @@ public class ZorkAssignmentKsenia {
 
     } // end room five method
 
-    public static int roomSix(boolean secretOpen) {
+    public static int roomSix() {
         Scanner keyboard = new Scanner(System.in);
         String answer;
 
@@ -199,5 +198,27 @@ public class ZorkAssignmentKsenia {
         } // end if-else whether secret room is available or not
 
     } // end room six method
+
+
+    public static int roomSeven() {
+        Scanner keyboard = new Scanner(System.in);
+        String answer;
+
+        System.out.println("Welcome to room 7, the parlor room.");
+        System.out.println("You see a treasure chest.");
+        System.out.println("You can go West (W), or South (S)");
+
+        while (true) {
+            answer = keyboard.nextLine();
+            if (answer.equalsIgnoreCase("W")) {
+                return 6;  // will call method roomSix from inside main()
+            } else if (answer.equalsIgnoreCase("S")) {
+                return 4; // will call method roomFour from inside main()
+            } else {
+                System.out.println("Please enter a valid choice (W: West to room 6, S: to room 4): ");
+            }
+        } //end while loop - room 7
+
+    } //end- roomSeven method
 
 }
