@@ -31,7 +31,7 @@ public class ZorkAssignmentKsenia {
         while (play) {
             if (choice == 0) {
                 play = false;
-                System.out.println("Goodbye!");
+                ghost();
             } else if (choice == 1) {
                 choice = roomOne();
             } else if (choice == 2) {
@@ -54,6 +54,14 @@ public class ZorkAssignmentKsenia {
 
     } // end main
 
+    public static void ghost(){
+        Random randomGenerator = new Random();
+        int random = randomGenerator.nextInt(4) + 1;   // make it random in the range of 1 through 4
+        if (random == 1) {
+            System.out.println("You are being followed by a ghost!");
+        }
+        System.out.println("Goodbye!");
+    }
 
     public static int roomOne() {
         Scanner keyboard = new Scanner(System.in);
