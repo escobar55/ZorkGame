@@ -6,11 +6,14 @@
 
 import java.util.Scanner;
 import java.util.Random;
+import java.util.Arrays;
 
 public class ZorkAssignment {
 
     public static boolean secretOpen;
     public static int numberVisited;
+    public static int rooms = 8;             // the total number of rooms we have in our code!
+    public static boolean[] roomsVisited = new boolean[rooms];  // by default initializes to all false
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
@@ -65,10 +68,22 @@ public class ZorkAssignment {
     public static void ghost(){
         Random randomGenerator = new Random();
         int random = randomGenerator.nextInt(4) + 1;   // make it random in the range of 1 through 4
-        System.out.println("You visited " + numberVisited + " rooms!");
-        if (random == 1) {
-            System.out.println("You are being followed by a ghost!");
+
+        // how many of the total rooms did we see?
+        int counter = 0;
+        for (int i = 0; i < rooms; i++) {
+            if (roomsVisited[i] == true) {
+                counter++;
+            }
         }
+        System.out.println("You saw " + counter + " out of a possible " + rooms + " rooms!");
+
+        System.out.println("While exploring the castle, you walked through " + numberVisited + " rooms!");
+
+        if (random == 1) {
+            System.out.println("\n*** You are being followed by a ghost! ***\n");
+        }
+
         System.out.println("Goodbye!");
     }
 
@@ -77,6 +92,7 @@ public class ZorkAssignment {
         String answer;
 
         numberVisited++;
+        roomsVisited[0] = true;     // room # - 1 = index #
         System.out.println("Welcome to room 1, the foyer.");
         System.out.println("You see a dead scorpion.");
         System.out.println("You can go North (N), or Quit (Q).");
@@ -100,6 +116,7 @@ public class ZorkAssignment {
         String answer;
 
         numberVisited++;
+        roomsVisited[1] = true;     // room # - 1 = index #
         System.out.println("Welcome to room 2, the front room.");
         System.out.println("You see a piano.");
         System.out.println("You can go South (S), West (W), East (E), or Quit (Q).");
@@ -127,6 +144,7 @@ public class ZorkAssignment {
         String answer;
 
         numberVisited++;
+        roomsVisited[2] = true;     // room # - 1 = index #
         System.out.println("Welcome to room 3, the library.");
         System.out.println("You see a bunch of spiders.");
         System.out.println("You can go North (N), East (E), or Quit (Q).");
@@ -151,6 +169,7 @@ public class ZorkAssignment {
         String answer;
 
         numberVisited++;
+        roomsVisited[3] = true;     // room # - 1 = index #
         System.out.println("Welcome to room 4, the kitchen room.");
         System.out.println("You see bats.");
         System.out.println("You can go West (W), North (N), or Quit (Q).");
@@ -175,6 +194,7 @@ public class ZorkAssignment {
         String answer;
 
         numberVisited++;
+        roomsVisited[4] = true;     // room # - 1 = index #
         System.out.println("Welcome to room 5, the dining room.");
         System.out.println("You see some dust and an empty box.");
         System.out.println("You can only go South (S), or Quit (Q).");
@@ -197,6 +217,7 @@ public class ZorkAssignment {
         String answer;
 
         numberVisited++;
+        roomsVisited[5] = true;     // room # - 1 = index #
         System.out.println("Welcome to room 6, the vault.");
         System.out.println("You see 3 walking skeletons.");
 
@@ -247,6 +268,7 @@ public class ZorkAssignment {
         String answer;
 
         numberVisited++;
+        roomsVisited[6] = true;     // room # - 1 = index #
         System.out.println("Welcome to room 7, the parlor room.");
         System.out.println("You see a treasure chest.");
         System.out.println("You can go West (W), South (S), or Quit (Q).");
@@ -272,6 +294,7 @@ public class ZorkAssignment {
         String answer;
 
         numberVisited++;
+        roomsVisited[7] = true;     // room # - 1 = index #
         System.out.println("Welcome to room 8, the secret room.");
         System.out.println("You see piles of gold!.");
         System.out.println("You can only go West (W), or Quit (Q).");
