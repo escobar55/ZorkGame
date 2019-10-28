@@ -39,11 +39,9 @@
       </list>
     </option>
   </component>
-<<<<<<< HEAD
-  <component name="RunManager" selected="Application.ZorkAssignmentSoheila">
-=======
+
   <component name="RunManager" selected="Application.ZorkAssignmentKsenia">
->>>>>>> 912a07921a0c2ae77b49afc0d3fb2c8a76c3527b
+
     <configuration name="ZorkAssignment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ZorkAssignment" />
       <module name="ZorkAssignment" />
@@ -51,13 +49,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
+
     <configuration name="ZorkAssignmentSoheila" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ZorkAssignmentSoheila" />
-=======
+
     <configuration name="ZorkAssignmentKsenia" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ZorkAssignmentKsenia" />
->>>>>>> 912a07921a0c2ae77b49afc0d3fb2c8a76c3527b
+
       <module name="ZorkAssignment" />
       <method v="2">
         <option name="Make" enabled="true" />

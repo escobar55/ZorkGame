@@ -21,9 +21,9 @@ public class ZorkAssignmentSoheila {
                 System.out.println(answer);
             } else if (answer == 2) {
                 answer = roomTwo();
-            } /*else if (answer == 3) {
+            } else if (answer == 3) {
                 answer = roomThree();
-            } else if (answer == 4) {
+            } /*else if (answer == 4) {
                 answer = roomFour();
             } else if (answer == 5) {
                 answer = roomFive();
@@ -72,15 +72,35 @@ public class ZorkAssignmentSoheila {
             answer = keyboard.nextLine();
             if (answer.equalsIgnoreCase("S")) {
                 return 1;  // will call method roomOne from inside main()
-            } else if(answer.equalsIgnoreCase("w")){
+            } else if (answer.equalsIgnoreCase("w")) {
                 return 3; // will call method roomThree from inside main()
-            } else if(answer.equalsIgnoreCase("e")){
+            } else if (answer.equalsIgnoreCase("e")) {
                 return 4; // will call method roomFour from inside main()
-            }  else {
+            } else {
                 System.out.println("Please enter a valid choice (S: South back to room 1, W: to room 3, E: to room 4): ");
             }
         } //end while loop - room 2
 
-    } //end-room one method
+    } //end-room two method
 
-} //end main class
+    public static int roomThree() {
+        Scanner keyboard = new Scanner(System.in);
+        String answer;
+
+        System.out.println("Welcome to room 3, the library.");
+        System.out.println("You see a bunch of spiders.");
+        System.out.println("You can go North (N) or go back the way you came (E).");
+
+        while (true) {
+            answer = keyboard.nextLine();
+            if (answer.equalsIgnoreCase("n")) {
+                return 5;  // will call method roomTwo from inside main()
+            } else if (answer.equalsIgnoreCase("e")) {
+                return 2;
+            } else {
+                System.out.println("Please enter a valid choice (N: North, E: East): ");
+            }
+        }//end-while loop
+    } //end - room three method
+
+}//end main class
