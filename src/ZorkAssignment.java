@@ -1,8 +1,9 @@
+
 /**
  * Zork Assignment Group Project
  * October 28, 2019
  */
-
+/*
 import java.awt.image.BandedSampleModel;
 import java.util.Scanner;
 
@@ -27,9 +28,28 @@ public class ZorkAssignment {
             } else if (answer == 1) {
                 answer = roomOne();
             }
-        }
 
-    }
+            // rooms to be written
+//            else if (answer == 2) {
+//                answer = roomTwo();
+//            } else if (answer == 3) {
+//                answer = roomThree();
+//            } else if (answer == 4) {
+//                answer = roomFour();
+//            } else if (answer == 5) {
+//                answer = roomFive();
+//            } else if (answer == 6) {
+//                answer = roomSix();
+//            } else if (answer == 7) {
+//                answer = roomSeven();
+//            } else if (answer == 8) {
+//                answer = roomEight();
+//            } // end else-ifs
+
+
+        } // end play loop
+
+    } // end main
 
     public static int roomOne() {
         Scanner keyboard = new Scanner(System.in);
@@ -49,7 +69,8 @@ public class ZorkAssignment {
                 System.out.println("Please enter a valid choice (N: North to room 2, Q: to exit castle): ");
             }
         }
-
     }
 
 }
+
+*/
